@@ -1,6 +1,26 @@
 import React, { Component } from 'react';
+import {
+    BrowserRouter as Router,
+    Link,
+    Route,
+} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
+
+
+const Home = () => (
+    <div>
+        <h3>This is home</h3>
+    </div>
+);
+
+
+const Subpage = () => (
+    <div>
+        <h3>This is subpage</h3>
+    </div>
+)
+
 
 class App extends Component {
   render() {
@@ -10,9 +30,16 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Router>
+            <div>
+                <ul>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/subpage'>Subpage</Link></li>
+                </ul>
+                <Route exact path='/' component={Home} />
+                <Route path='/subpage' component={Subpage} />
+            </div>
+        </Router>
       </div>
     );
   }
