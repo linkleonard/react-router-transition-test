@@ -22,3 +22,16 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+.Page {
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    background: white;
+}
+
+.PageRow {
+    display: block;
+    text-align: left;
+}
