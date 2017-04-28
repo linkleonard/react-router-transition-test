@@ -35,8 +35,8 @@ class App extends Component {
           <h2>Welcome to React</h2>
         </div>
         <Router>
-            <div>
-                <ul>
+            <div className="Container">
+                <ul className="Nav">
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/subpage'>Subpage</Link></li>
                 </ul>
