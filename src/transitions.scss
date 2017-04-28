@@ -25,3 +25,33 @@
         transform: scaleY(0);
     }
 }
+
+
+.slide-base {
+    position: absolute;
+    width: 100%;
+    transition: transform 500ms ease, opacity 300ms ease;
+}
+
+.slide-enter {
+    @extend .slide-base;
+
+    transform: translateX(20%);
+    opacity: 0.01;
+
+    &.slide-enter-active {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.slide-leave {
+    @extend .slide-base;
+    transform: translateX(0%);
+    opacity: 1;
+
+    &.slide-leave-active {
+        opacity: 0.01;
+        transform: translateX(20%);
+    }
+}

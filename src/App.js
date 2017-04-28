@@ -43,7 +43,7 @@ class App extends Component {
                 <div className="PageRow">
                     <Route key='home' exact path='/' children={({match}) => (
                         <CSSTransitionGroup
-                            transitionName="collapse"
+                            transitionName="slide"
                             transitionEnterTimeout={500}
                             transitionLeaveTimeout={500}
                         >
@@ -52,7 +52,7 @@ class App extends Component {
                     )} />
                     <Route key='subpage' path='/subpage' children={({match}) => (
                         <CSSTransitionGroup
-                            transitionName="collapse"
+                            transitionName="slide"
                             transitionEnterTimeout={500}
                             transitionLeaveTimeout={500}
                         >
